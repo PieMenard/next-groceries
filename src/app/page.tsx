@@ -6,7 +6,7 @@ export default function Home() {
     <div className="w-screen py-20 flex flex-col justify-center items-center">
       <span className="text-4xl font-extrabold uppercase">Next Groceries</span>
       <h1 className="text-5xl font-extrabold uppercase mb-5 text-center">
-        Track your groceries!
+        Manage your shopping list!
       </h1>
 
       <div className="flex flex-col justify-center items-center">

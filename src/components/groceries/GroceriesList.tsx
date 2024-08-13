@@ -1,4 +1,5 @@
 import { prisma } from '@/utils/prisma';
+import GroceryItem from './GroceryItem';
 
 async function getData() {
   const data = await prisma.grocery.findMany({
@@ -19,7 +20,7 @@ const GroceriesList = async () => {
   return (
     <div className="flex flex-col gap-5 items-center justify-center mt-10 w-screen">
       {data.map((grocery) => (
-        <div key={grocery.id}>{grocery.name}</div>
+        <div key={grocery.id}>{<GroceryItem grocery={grocery} />}</div>
       ))}
     </div>
   );

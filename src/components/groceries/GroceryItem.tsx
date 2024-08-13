@@ -4,8 +4,15 @@ import EditGrocery from './EditGrocery';
 import DeleteGrocery from './DeleteGrocery';
 
 const GroceryItem = ({ grocery }: { grocery: groceryType }) => {
+  const groceryStyle = {
+    textDecoration: grocery.isBought ? 'line-through' : 'none',
+    opacity: grocery.isBought ? 0.5 : 1,
+  };
   return (
-    <div className="w-10/12 mx-auto flex items-center justify-between gap-5 bg-slate-900 px-20 py-2 rounded-xl">
+    <div
+      style={groceryStyle}
+      className="w-10/12 mx-auto flex items-center justify-between gap-5 bg-slate-900 px-20 py-2 rounded-xl"
+    >
       <ChangeGroceryStatus grocery={grocery} />
       <span className="text-center font-bold uppercase grow">
         {grocery.name}

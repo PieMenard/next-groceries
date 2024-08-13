@@ -38,3 +38,19 @@ export async function changeGroceryStatus(formData: FormData) {
 
   revalidatePath('/');
 }
+
+export async function updateGrocery(formData: FormData) {
+  const input = formData.get('editName') as string;
+  const inputId = formData.get('inputId') as string;
+
+  await prisma.grocery.update({
+    where: {
+      id: inputId,
+    },
+    data: {
+      name: input,
+    },
+  });
+
+  revalidatePath('/');
+}

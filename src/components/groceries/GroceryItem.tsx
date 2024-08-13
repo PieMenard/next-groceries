@@ -1,5 +1,6 @@
 import { groceryType } from '@/types/grocery';
 import ChangeGroceryStatus from './ChangeGroceryStatus';
+import EditGrocery from './EditGrocery';
 
 const GroceryItem = ({ grocery }: { grocery: groceryType }) => {
   return (
@@ -7,6 +8,7 @@ const GroceryItem = ({ grocery }: { grocery: groceryType }) => {
       <span className="text-center font-bold uppercase grow">
         {grocery.name}
       </span>
+      <EditGrocery grocery={grocery} />
       <ChangeGroceryStatus grocery={grocery} />
     </div>
   );

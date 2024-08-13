@@ -12,6 +12,7 @@ const EditGrocery = ({ grocery }: { grocery: groceryType }) => {
   const [editGroceryInput, setEditGroceryInput] = useState(false);
 
   const handleEdit = () => {
+    if (grocery.isBought) return; //disable edit if grocery is already bought
     setEditGroceryInput(!editGroceryInput);
   };
 

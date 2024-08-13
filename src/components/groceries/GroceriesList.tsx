@@ -20,7 +20,9 @@ const GroceriesList = async () => {
   return (
     <div className="flex flex-col gap-5 items-center justify-center mt-10 w-screen">
       {data.map((grocery) => (
-        <div key={grocery.id}>{<GroceryItem grocery={grocery} />}</div>
+        <div className="w-full" key={grocery.id}>
+          {<GroceryItem grocery={grocery} />}
+        </div>
       ))}
     </div>
   );

@@ -54,3 +54,15 @@ export async function updateGrocery(formData: FormData) {
 
   revalidatePath('/');
 }
+
+export async function deleteGrocery(formData: FormData) {
+  const inputId = formData.get('inputId') as string;
+
+  await prisma.grocery.delete({
+    where: {
+      id: inputId,
+    },
+  });
+
+  revalidatePath('/');
+}

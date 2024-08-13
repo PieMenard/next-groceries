@@ -1,4 +1,5 @@
 import AddGrocery from '@/components/groceries/AddGrocery';
+import GroceriesList from '@/components/groceries/GroceriesList';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
 
       <div className="flex flex-col justify-center items-center">
         <AddGrocery />
-        {/*list items*/}
+        <GroceriesList />
       </div>
     </div>
   );

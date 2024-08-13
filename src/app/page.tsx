@@ -1,3 +1,5 @@
+import AddGrocery from '@/components/groceries/AddGrocery';
+
 export default function Home() {
   return (
     <div className="w-screen py-20 flex flex-col justify-center items-center">
@@ -7,7 +9,7 @@ export default function Home() {
       </h1>
 
       <div className="flex flex-col justify-center items-center">
-        {/*add item*/}
+        <AddGrocery />
         {/*list items*/}
       </div>
     </div>

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 type buttonProps = {
   type: 'button' | 'submit' | 'reset';
   text: string | React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   actionButton?: boolean;
   bgColor?: string;
 };

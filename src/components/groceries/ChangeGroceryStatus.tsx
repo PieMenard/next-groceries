@@ -3,11 +3,11 @@ import Button from '../Button';
 import Form from '../Form';
 import Input from '../Input';
 import { FaCheck } from 'react-icons/fa';
-import { editGrocery } from '@/actions';
+import { changeGroceryStatus } from '@/actions';
 
-const EditGrocery = ({ grocery }: { grocery: groceryType }) => {
+const ChangeGroceryStatus = ({ grocery }: { grocery: groceryType }) => {
   return (
-    <Form action={editGrocery}>
+    <Form action={changeGroceryStatus}>
       <Input name="inputId" value={grocery.id} type="hidden" />
       <Button
         type="submit"
@@ -19,4 +19,4 @@ const EditGrocery = ({ grocery }: { grocery: groceryType }) => {
   );
 };
 
-export default EditGrocery;
+export default ChangeGroceryStatus;

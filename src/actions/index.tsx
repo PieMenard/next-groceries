@@ -19,7 +19,7 @@ export async function createGrocery(formData: FormData) {
   revalidatePath('/');
 }
 
-export async function editGrocery(formData: FormData) {
+export async function changeGroceryStatus(formData: FormData) {
   const inputId = formData.get('inputId') as string;
   const groceryToEdit = await prisma.grocery.findUnique({
     where: {

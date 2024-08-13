@@ -4,7 +4,7 @@ import { useRef } from 'react';
 
 type formProps = {
   children: React.ReactNode;
-  action: (FormData: FormData) => void;
+  action: (FormData: FormData) => Promise<void | boolean>;
   className?: string;
   onSubmit?: () => void;
 };
